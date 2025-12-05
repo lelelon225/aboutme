@@ -33,15 +33,30 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border: black 1px solid;
+    border-radius: 16px;
 }
 button:hover {
-    background-color: #ddd;
+    background-color: pink;
+}
+input{
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: #333333 1px solid;
+    border-radius: 16px;
+}
+.message{
+    height: 150px;
+    
 }
 .parent {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 9px;
+    gap: 20px;
 }
     
 .header {
@@ -53,24 +68,48 @@ button:hover {
     grid-column: span 3 / span 3;
     grid-column-start: 1;
     grid-row-start: 5;
-    text-align: center;
+    text-align: center;;
 }
 
 .socials {
     grid-row: span 3 / span 3;
     grid-column-start: 1;
     grid-row-start: 2;
+    border: #333333 1px solid;
+    border-radius: 16px;
+    text-align: center;
 }
 
 .aboutme {
     grid-row: span 3 / span 3;
     grid-column-start: 2;
     grid-row-start: 2;
+    border: #333333 1px solid;
+    border-radius: 16px;
+    text-align: center;
 }
 
-.div5 {
+.contact {
     grid-row: span 3 / span 3;
     grid-column-start: 3;
     grid-row-start: 2;
+    border: #333333 1px solid;
+    border-radius: 16px;
+    text-align: center;
 }
-        
+.contact:hover, .aboutme:hover, .socials:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: 100ms;
+}
+@media screen {
+    @media (max-width: 600px) {
+        .parent {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(9, auto);
+        }
+        .header, .footer, .socials, .aboutme, .contact {
+            grid-column: span 1 / span 1;
+            grid-row-start: auto;
+        }
+    }
+}        
