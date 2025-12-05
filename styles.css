@@ -1,38 +1,76 @@
-
+:root{
+    --main-color: #ffffff;
+    --secondary-color: grey;
+    --font-color: #333333;
+    --background-color: #f5f5f5;
+    --padding: 16px;
+    --margin: 16px;
+    --border-radius: 8px;;
+}
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+nav {
+  margin-bottom: 20px;
+  align-content: flex-end;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ddd;
+}
 .parent {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
+    gap: 9px;
 }
     
-.div1 {
+.header {
+    grid-column: span 3 / span 3;
+    text-align: center;
+}
+
+.footer {
+    grid-column: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    text-align: center;
+}
+
+.socials {
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.aboutme {
     grid-row: span 3 / span 3;
     grid-column-start: 2;
     grid-row-start: 2;
 }
 
-.div2 {
+.div5 {
     grid-row: span 3 / span 3;
     grid-column-start: 3;
     grid-row-start: 2;
-}
-
-.div3 {
-    grid-row: span 3 / span 3;
-    grid-column-start: 4;
-    grid-row-start: 2;
-}
-
-.div4 {
-    grid-column: span 5 / span 5;
-    grid-column-start: 1;
-    grid-row-start: 5;
-}
-
-.div5 {
-    grid-column: span 5 / span 5;
-    grid-column-start: 1;
-    grid-row-start: 1;
 }
         
