@@ -1,4 +1,5 @@
 {
+  "buildCommand": "astro build",
   "redirects": [
     {
       "source": "/",
