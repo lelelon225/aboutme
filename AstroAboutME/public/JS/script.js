@@ -3,20 +3,34 @@
 function darkmode() {
     const root = document.documentElement;
     const currentTheme = root.getAttribute('data-theme');
+    const moonIcon = document.getElementById('moonIcon');
+    const logo = document.getElementById('L-Logo');
    
      
-     if (currentTheme === 'dark-mode') {
+    if (currentTheme === 'dark-mode') {
         root.removeAttribute('data-theme');
-        document.getElementById('moonIcon').style.visibility = 'visible';
-        document.getElementById('sunIcon').style.visibility = 'hidden';
+        if (moonIcon) {
+            moonIcon.style.visibility = 'visible';
+            moonIcon.style.filter = 'none';
+            moonIcon.src = 'media/darkmode.svg';
+            moonIcon.alt = 'moon';
+        }
+        if (logo) {
+            logo.style.filter = 'none';
+        }
 
     }
-     else  {
+    else  {
         root.setAttribute('data-theme', 'dark-mode');
-        document.getElementById('sunIcon').style.visibility = 'visible';
-        document.getElementById('sunIcon').style.filter = 'invert(1)';
-        document.getElementById('L-Logo').style.fill = '#ffffff';
-        document.getElementById('moonIcon').style.visibility = 'hidden';
+        if (moonIcon) {
+            moonIcon.style.visibility = 'visible';
+            moonIcon.style.filter = 'invert(1)';
+            moonIcon.src = 'media/lightmode.svg';
+            moonIcon.alt = 'sun';
+        }
+        if (logo) {
+            logo.style.filter = 'invert(1)';
+        }
     }
 }
 

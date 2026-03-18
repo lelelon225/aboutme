@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://leonhebeisen.vercel.app/",
+      "destination": "/home",
+      "permanent": false
+    }
+]
+}
