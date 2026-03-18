@@ -3,7 +3,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   adapter: vercel(),
-  output: 'server',   // 👈 THIS is the missing piece
+  output: 'server',
   redirects: {
     "/": "/home"
   }
