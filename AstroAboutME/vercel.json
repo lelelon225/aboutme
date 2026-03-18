@@ -6,8 +6,9 @@
       "permanent": false
     },
     {
-      "source": "/home",
-      "destination": "/home",
+      "source": "/*",
+      "statusCode": 404,
+      "destination": "/404",
       "permanent": false
     }
 
