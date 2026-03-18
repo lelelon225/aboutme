@@ -4,6 +4,12 @@
       "source": "/",
       "destination": "/home",
       "permanent": false
+    },
+    {
+      "source": "/home",
+      "destination": "/home",
+      "permanent": false
     }
+
 ]
 }
