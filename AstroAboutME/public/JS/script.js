@@ -5,8 +5,7 @@ function darkmode() {
     const currentTheme = root.getAttribute('data-theme');
     const moonIcon = document.getElementById('moonIcon');
     const logo = document.getElementById('L-Logo');
-   
-     
+    
     if (currentTheme === 'dark-mode') {
         root.removeAttribute('data-theme');
         if (moonIcon) {
