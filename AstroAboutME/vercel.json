@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm install && astro build",
+  "buildCommand": "astro build",
   "redirects": [
     {
       "source": "/",
