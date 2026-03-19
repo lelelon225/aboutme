@@ -7,11 +7,9 @@
       "permanent": false
     },
     {
-      "source": "/(.*)",
-      "statusCode": 404,
+      "source": "/((?!home|about|contact).*)",
       "destination": "/404",
-      "permanent": false
+      "statusCode": 404
     }
-
-]
+  ]
 }
